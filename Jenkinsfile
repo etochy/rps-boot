@@ -5,6 +5,8 @@ pipeline {
       steps {
         echo 'Start build'
         sh 'mvn clean install'
+        recordIssues()
+        timestamps()
       }
     }
 
